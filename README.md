@@ -12,10 +12,12 @@
 
 - 양쪽 도메인의 병렬 고유명사 matrix 를 구성하고... representation space 의 similarity 를 계산. 아니지 한쪽 도메인의 matrix 를 transformation 하는 걸 학습. representation similarity 계산결과 sum 이 최대화 되는 transformation function 을 찾는다.
 
-- argmax problem 의 결과로 나온 transformation function 을 한쪽 도메인 전체에 적용시켜 transform embedding space 를 만들고 기존의 embedding space 와 concat 하는 방식으로 해보자. 
+- argmax problem 의 결과로 나온 transformation function 을 한쪽 도메인 전체에 적용시켜 transform embedding space 를 만들고 기존의 embedding space 와 concat 하는 방식으로 해보자.
 
 ### 추가 진행 사항
 
 - **MORE** Multi lingual embedding paper research
 
 - [Multilingual Anchoring Paper](https://github.com/forest-snow/mtanchor_demo) Github didnt have source
+
+- [유사도 지표 참고](https://data-science-hi.tistory.com/150)
