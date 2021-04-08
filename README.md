@@ -21,3 +21,11 @@
 - [Multilingual Anchoring Paper](https://github.com/forest-snow/mtanchor_demo) Github didnt have source
 
 - [유사도 지표 참고](https://data-science-hi.tistory.com/150)
+
+
+
+### 번외
+
+character level embedding 방법을 통해서 model centric view 가 아닌 data centric view 로 문제를 바라볼 수 있지 않을까?
+
+데이터에 불순물이 있더라도 모델에는 spatial 하게 임베딩이 되지 않을까? 그렇다면 데이터 순화를 위해서 노력을 덜 해도..? 
