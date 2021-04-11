@@ -1,6 +1,7 @@
 ### Main Idea
 
 - Multilingual Anchoring
+- Multilingual Embedding
 
 ### Hypothesis
 
