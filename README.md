@@ -18,6 +18,10 @@
 
 - argmax problem 의 결과로 나온 transformation function 을 한쪽 도메인 전체에 적용시켜 transform embedding space 를 만들고 기존의 embedding space 와 concat 하는 방식으로 해보자.
 
+### Eval
+
+- NMT model 과 경쟁이 가능할까? 
+
 ### 추가 진행 사항
 
 - **MORE** Multi lingual embedding paper research
