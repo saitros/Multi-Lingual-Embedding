@@ -19,6 +19,8 @@
 
 - argmax problem 의 결과로 나온 transformation function 을 한쪽 도메인 전체에 적용시켜 transform embedding space 를 만들고 기존의 embedding space 와 concat 하는 방식으로 해보자.
 
+- 여러 차원에 걸쳐서 분포해야지 의미가 있을텐데 3차원 공간에 일직선상의 점 3개가 공간을 정의할 수 있는가?
+
 ### Eval
 
 - NMT model 과 경쟁이 가능할까? 
