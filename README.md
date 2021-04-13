@@ -38,16 +38,24 @@
 
 ### 추가 진행 사항
 
+
+### 진행상황 
+
+- 한,영 병렬 고유명사 셋 구축 (한글 1000개 샘플에 대해서 papago 번역 매칭 결과 576개, 일단 embedding dim 보다는 큰 숫자)
+- transformer encoder 연산을 300,1 로 생각하면 수정가능할거같은데 이거 
+
+
+
+## 번외
+
+### Multi lingual embedding
 - **MORE** Multi lingual embedding paper research
 
 - [Multilingual Anchoring Paper](https://github.com/forest-snow/mtanchor_demo) Github didnt have source
 
 - [유사도 지표 참고](https://data-science-hi.tistory.com/150)
 
+### character level embedding
+- character level embedding 방법을 통해서 model centric view 가 아닌 data centric view 로 문제를 바라볼 수 있지 않을까?
 
-
-### 번외
-
-character level embedding 방법을 통해서 model centric view 가 아닌 data centric view 로 문제를 바라볼 수 있지 않을까?
-
-데이터에 불순물이 있더라도 모델에는 spatial 하게 임베딩이 되지 않을까? 그렇다면 데이터 순화를 위해서 노력을 덜 해도..? 
+- 데이터에 불순물이 있더라도 모델에는 spatial 하게 임베딩이 되지 않을까? 그렇다면 데이터 순화를 위해서 노력을 덜 해도..? 
