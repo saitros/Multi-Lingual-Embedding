@@ -19,6 +19,12 @@
 
 - argmax problem 의 결과로 나온 transformation function 을 한쪽 도메인 전체에 적용시켜 transform embedding space 를 만들고 기존의 embedding space 와 concat 하는 방식으로 해보자.
 
+- transformation function 을 transformer encoder 를 사용해보려고 하는데 pos_enc 는 필요 없어보임
+
+- shape 구조는 (batch, fasttext_embedding dim = 300, d_model = ? ) 로 진행될 
+
+- q, k, v 연산을 통해서 각 embedding dim 사이의 관계가 학습 될 수 있지 않을까..? 
+
 - 여러 차원에 걸쳐서 분포해야지 의미가 있을텐데 3차원 공간에 일직선상의 점 3개가 공간을 정의할 수 있는가?
 
 ### Eval
@@ -28,7 +34,7 @@
 ### ISSSSSSSSSSSSSSSUE 
 
 - pretrained fast text 를 사용하는데 'NNP'를 기반으로 영어 대응 사전을 만들려고 시도. 번역에 google trans 를 사용했는데 time.sleep 을 깜빡해서 한동안 request 에 same response 를 받음..
-   --> NAVER PAPAGO API를 사용해보자..? 
+   --> NAVER PAPAGO API를 사용해보자..? --> 성공 / 하루에 한글글자 만개 가능(미국 2글자). 24시 초기화. 
 
 ### 추가 진행 사항
 
