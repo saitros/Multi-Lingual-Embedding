@@ -1,3 +1,10 @@
+# ISSSSSSSSSSSSSSSUE 
+
+- pretrained fast text 를 사용하는데 'NNP'를 기반으로 영어 대응 사전을 만들려고 시도. 번역에 google trans 를 사용했는데 time.sleep 을 깜빡해서 한동안 request 에 same response 를 받음..
+   --> NAVER PAPAGO API를 사용해보자..? --> 성공 / 하루에 한글글자 만개 가능(미국 2글자). 24시 초기화. 
+   
+- papago 데이터 추가시 일일 요청건을 넘기면 None data return --> except문으로 우회 
+
 ### Main Idea
 
 - Multilingual Anchoring
@@ -31,10 +38,6 @@
 
 - NMT model 과 경쟁이 가능할까? 
 
-### ISSSSSSSSSSSSSSSUE 
-
-- pretrained fast text 를 사용하는데 'NNP'를 기반으로 영어 대응 사전을 만들려고 시도. 번역에 google trans 를 사용했는데 time.sleep 을 깜빡해서 한동안 request 에 same response 를 받음..
-   --> NAVER PAPAGO API를 사용해보자..? --> 성공 / 하루에 한글글자 만개 가능(미국 2글자). 24시 초기화. 
 
 ### 추가 진행 사항
 
