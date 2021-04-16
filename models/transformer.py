@@ -58,12 +58,16 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
         scaled_attention, attention_weights = scaled_dot_product_attention(
             q, k, v, mask)
+        
+        print("Scaled_attention Shape : ", scaled_attention.shape)
 
         scaled_attention = tf.transpose(scaled_attention, perm=[0, 2, 1, 3])  
-
+        
+        print("Scaled_attention Shape : ", scaled_attention.shape)
+        
         concat_attention = tf.reshape(scaled_attention,
                                       (batch_size, -1, self.d_model))  
-
+        print("Concat attention Shape :", concat_attention.shape)
         output = self.dense(concat_attention)  
 
         return output, attention_weights
@@ -116,8 +120,10 @@ class Encoder(tf.keras.layers.Layer):
 
         self.dropout = tf.keras.layers.Dropout(rate)
 
-    def call(self, x, training, mask):
-
+    def call(self, x, training, mask=None):
+        
+        x = tf.expand_dims(x, -1)
+        print("Model Input shape", x.shape)
         seq_len = tf.shape(x)[1]
 
         # adding embedding and position encoding.
