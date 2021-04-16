@@ -132,3 +132,4 @@ dmypy.json
 *.zip
 *.vec
 *.bin
+checkpoints/
