@@ -45,7 +45,10 @@
 ### 진행상황 
 
 - 한,영 병렬 고유명사 셋 구축 (한글 1000개 샘플에 대해서 papago 번역 매칭 결과 576개, 일단 embedding dim 보다는 큰 숫자)
-- transformer encoder 연산을 300,1 로 생각하면 수정가능할거같은데 이거 
+- transformer encoder 연산을 300,1 로 생각하면 수정가능할거같은데 이거 (일단은 패쓰)
+
+- MHA 에 대해서 조금 더 생각해보자.. 우선은 MHA = 1 로 one head 로 가는데 MHA 를 생각해보자 
+- QKV 에 대한 Dim 에 대한 생각도 필요. 300, 1 로 각 embedding 값이 들어가고 사이의 관계를 학습하는게 의미가 있지 embedding 값을 또 embedding 하는건 meta-meta-meta 러닝 같은 느낌
 
 
 
