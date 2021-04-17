@@ -68,7 +68,9 @@ class MultiHeadAttention(tf.keras.layers.Layer):
         concat_attention = tf.reshape(scaled_attention,
                                       (batch_size, -1, self.d_model))  
         print("Concat attention Shape :", concat_attention.shape)
-        output = self.dense(concat_attention)  
+        output = self.dense(concat_attention) 
+        output = tf.reduce_mean(output, axis=-1, keepdims=True)
+        print(output.shape)
 
         return output, attention_weights
     
@@ -83,7 +85,7 @@ class EncoderLayer(tf.keras.layers.Layer):
         super(EncoderLayer, self).__init__()
         
         self.mha = MultiHeadAttention(d_model, num_heads)
-        self.ffn = point_wise_feed_forward_network(d_model, dff)
+        self.ffn = point_wise_feed_forward_network(1, dff)
         
         self.layernorm_1 = tf.keras.layers.LayerNormalization(epsilon=1e-6)
         self.layernorm_2 = tf.keras.layers.LayerNormalization(epsilon=1e-6)
@@ -93,14 +95,16 @@ class EncoderLayer(tf.keras.layers.Layer):
         
     def call(self, x, training, mask):
         
+        print(x.shape)
+        
         attn_output, _ = self.mha(x, x, x, mask) # (batch, fasttext_embedding_dim, d_model)
         attn_output = self.dropout_1(attn_output, training=training)
         out_1 = self.layernorm_1(x + attn_output)
-        
+       
         ffn_output = self.ffn(out_1)
         ffn_output = self.dropout_2(ffn_output, training=training)
         out_2 = self.layernorm_2(out_1 + ffn_output)
-        
+    
         return out_2
     
 class Encoder(tf.keras.layers.Layer):
@@ -110,10 +114,6 @@ class Encoder(tf.keras.layers.Layer):
 
         self.d_model = d_model
         self.num_layers = num_layers
-
-#         self.embedding = tf.keras.layers.Embedding(input_vocab_size, d_model)
-#         self.pos_encoding = positional_encoding(maximum_position_encoding,
-#                                                 self.d_model)
 
         self.enc_layers = [EncoderLayer(d_model, num_heads, dff, rate)
                            for _ in range(num_layers)]
