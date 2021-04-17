@@ -49,7 +49,7 @@
 
 - MHA 에 대해서 조금 더 생각해보자.. 우선은 MHA = 1 로 one head 로 가는데 MHA 를 생각해보자 
 - QKV 에 대한 Dim 에 대한 생각도 필요. 300, 1 로 각 embedding 값이 들어가고 사이의 관계를 학습하는게 의미가 있지 embedding 값을 또 embedding 하는건 meta-meta-meta 러닝 같은 느낌
-
+- QKV 8 num_head 8 로 결과에 대해 mean 한 결과를 기반으로 output 
 
 
 ## 번외
