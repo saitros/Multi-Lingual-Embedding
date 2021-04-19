@@ -37,6 +37,8 @@
 - transformer encoder 는 학습이 잘 진행되지 않는다 이유가 뭘까..?
 
 - Procrustes analysis 에 대한 리서치 
+   - 그냥 특정한 변환 없이 정말 shape 을 맞추기만 했는데 Anchor 를 이런식으로 맞추고, 그 변환을 linear transform 으로 해서 전체 embedding space 를 바꿀수있을까?
+
 
 - 이번에 진짜 리서치가 부족했다. 몰랐던 부분이 너무 많이 등장함
 
