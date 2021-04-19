@@ -31,9 +31,9 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
         self.depth = d_model // self.num_heads
 
-        self.wq = tf.keras.layers.Dense(d_model)
-        self.wk = tf.keras.layers.Dense(d_model)
-        self.wv = tf.keras.layers.Dense(d_model)
+        self.wq = tf.keras.layers.Dense(d_model, use_bias=False)
+        self.wk = tf.keras.layers.Dense(d_model, use_bias=False)
+        self.wv = tf.keras.layers.Dense(d_model, use_bias=False)
 
         self.dense = tf.keras.layers.Dense(d_model)
 
@@ -76,8 +76,8 @@ class MultiHeadAttention(tf.keras.layers.Layer):
     
 def point_wise_feed_forward_network(d_model, dff):
     return tf.keras.Sequential([
-      tf.keras.layers.Dense(dff, activation='relu'),  # (batch_size, seq_len, dff)
-      tf.keras.layers.Dense(d_model)  # (batch_size, seq_len, d_model)
+      tf.keras.layers.Dense(dff, activation='relu', use_bias=False),  # (batch_size, seq_len, dff)
+      tf.keras.layers.Dense(d_model, use_bias=False)  # (batch_size, seq_len, d_model)
     ])
 
 class EncoderLayer(tf.keras.layers.Layer):
