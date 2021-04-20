@@ -40,6 +40,8 @@
    - 그냥 특정한 변환 없이 정말 shape 을 맞추기만 했는데 Anchor 를 이런식으로 맞추고, 그 변환을 linear transform 으로 해서 전체 embedding space 를 바꿀수있을까?
    - Linear Transform 을 기반으로 변환 500, 1000개 데이터에 대해서 변환한 모델을 기반으로 fasttext embedding 전체를 변환 하는것으로 하자. 
    - 논문 템플릿 텍스트 작성 수요일 목요일 추가 실험하고 결과만 넣어서 약간만 변화줄수있게 해보자 
+   - 논문 주제 : Anchor Alignment of Multi-Lingual Embedding with Procrustes
+
 
 - 이번에 진짜 리서치가 부족했다. 몰랐던 부분이 너무 많이 등장함
 
