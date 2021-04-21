@@ -133,4 +133,4 @@ dmypy.json
 *.vec
 *.bin
 checkpoints/
-*.pkl
+data/
