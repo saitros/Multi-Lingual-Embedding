@@ -64,6 +64,13 @@
 - QKV 에 대한 Dim 에 대한 생각도 필요. 300, 1 로 각 embedding 값이 들어가고 사이의 관계를 학습하는게 의미가 있지 embedding 값을 또 embedding 하는건 meta-meta-meta 러닝 같은 느낌
 - QKV 8 num_head 8 로 결과에 대해 mean 한 결과를 기반으로 output 
 
+- Transformer 모델로 학습이 안되고 있음 뭔가 잘못된게 분명한데 찾아볼 필요가 있음
+
+
+- 명사 sample 로 orthogoanl 을 몇개 찾을수있을까? 300차원의 gram schmidt process? 
+- procrustes method 를 기반으로 sentence 실험 
+- servey paper 공부
+
 
 ## 번외
 
