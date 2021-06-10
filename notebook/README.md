@@ -1,3 +1,5 @@
+# END FILE
+
 # ISSSSSSSSSSSSSSSUE 
 
 - pretrained fast text 를 사용하는데 'NNP'를 기반으로 영어 대응 사전을 만들려고 시도. 번역에 google trans 를 사용했는데 time.sleep 을 깜빡해서 한동안 request 에 same response 를 받음..
